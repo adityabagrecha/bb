@@ -4,44 +4,67 @@
   <title>Baby Bagrecha 🎀</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
+    :root {
+      --bg-color: #1A1B1E;
+    }
+
     html, body {
       margin: 0;
       padding: 0;
-      background: #1A1B1E;
+      height: 100%;
+      background: var(--bg-color);
       overflow: hidden;
     }
+
+    .overlay-top {
+      position: fixed;
+      left: 0;
+      width: 100%;
+      height: 6vh;
+      background: var(--bg-color);
+      z-index: 2;
+    }
+    
+      .overlay-bottom {
+      position: fixed;
+      left: 0;
+      width: 100%;
+      height: 28vh;
+      background: var(--bg-color);
+      z-index: 2;
+    }
+
+    .overlay-top {
+      top: 0;
+    }
+
+    .overlay-bottom {
+      bottom: 0;
+    }
+
     .iframe-wrapper {
       position: relative;
       width: 100vw;
       height: 100vh;
+      display: flex;
+      justify-content: center; /* center horizontally */
+      align-items: flex-start; /* top aligned */
+      z-index: 1;
     }
+
     iframe {
-      width: 100%;
       height: 100%;
+      width: auto;
+      max-width: 100vw;
       border: none;
-    }
-    .overlay-top, .overlay-bottom {
-      position: absolute;
-      left: 0;
-      width: 100%;
-      z-index: 9;
-      background: #1A1B1E;
-    }
-    .overlay-top {
-      top: 0;
-      height: 60px;
-    }
-    .overlay-bottom {
-      bottom: 0;
-      height: 90px;
     }
   </style>
 </head>
 <body>
   <div class="iframe-wrapper">
     <iframe src="https://www.scraaatch.com/s/tXTjI9" allowfullscreen></iframe>
-    <div class="overlay-top"></div>
-    <div class="overlay-bottom"></div>
   </div>
+  <div class="overlay-top"></div>
+  <div class="overlay-bottom"></div>
 </body>
 </html>
