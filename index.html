@@ -69,8 +69,8 @@
       if (!iframe || !overlay) return;
 
       const iframeWidth = iframe.offsetWidth;
-      const height = iframeWidth * (0.8);
-      overlay.style.height = `${height}px`;
+      const height = iframeWidth * (2);
+      overlay.style.top = `${height}px`;
     }
 
     window.addEventListener("load", updateOverlayBottom);
